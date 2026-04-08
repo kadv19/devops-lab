@@ -22,5 +22,11 @@ def index():
 def health():
     return jsonify({"status": "ok"})
 
+@app.route('/reset')
+def reset():
+    r.set('visits', 0)  # Changed redis_client to r
+    return jsonify({"message": "Counter reset to 0", "status": "success"})
+
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
