@@ -1,0 +1,5 @@
+# Paste below, then Ctrl+O → Enter → Ctrl+Xvenv/
+__pycache__/
+*.pyc
+.env
+*.md
